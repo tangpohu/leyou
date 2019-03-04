@@ -1,0 +1,5 @@
+<root>
+    <item name='org.bouncycastle.asn1.dvcs.Data'>
+        <annotation name='java.lang.Deprecated'/>
+    </item>
+</root>
