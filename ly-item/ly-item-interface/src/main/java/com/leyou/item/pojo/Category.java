@@ -7,7 +7,7 @@ import tk.mybatis.mapper.annotation.KeySql;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-
+@Table(name="tb_category")
 @Data
 public class Category {
     @Id
