@@ -16,7 +16,6 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="ly-upload" target="1.8" />
       <module name="lyupload" target="1.8" />
     </bytecodeTargetLevel>
   </component>
