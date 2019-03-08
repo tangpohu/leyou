@@ -1,5 +1,4 @@
-package com.leyou.upload;
-
+package com.leyou.upload.leyupload;
 
 import com.github.tobato.fastdfs.domain.StorePath;
 import com.github.tobato.fastdfs.domain.ThumbImageConfig;
@@ -16,7 +15,7 @@ import java.io.FileNotFoundException;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class FdfsTest {
+public class LeyUploadApplicationTests {
 
     @Autowired
     private FastFileStorageClient storageClient;
