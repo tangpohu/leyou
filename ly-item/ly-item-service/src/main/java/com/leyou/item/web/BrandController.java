@@ -8,6 +8,7 @@ import org.apache.ibatis.javassist.runtime.Desc;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -39,5 +40,13 @@ public class BrandController {
     public ResponseEntity<Void> saveBrand(Brand brand, @RequestParam("cids") List<Long> cids) {
         this.brandService.saveBrand(brand, cids);
         return  ResponseEntity.status(HttpStatus.CREATED).build();
+    }
+
+    /*
+     * 根据Cid查询品牌
+     * */
+    @GetMapping("/cid/{cid}")
+    public ResponseEntity<List<Brand>> queryBrandByCid(@PathVariable("cid")Long cid){
+        return ResponseEntity.ok(brandService.queryBrandByCid(cid));
     }
 }
