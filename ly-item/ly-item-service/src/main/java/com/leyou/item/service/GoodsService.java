@@ -41,18 +41,18 @@ public class GoodsService {
     @Autowired
     private StockMapper stockMapper;
 
-    public PageResult<Spu> querySpuByPage(Integer page, Integer rows, String saleable, String key) {
+    public PageResult<Spu> querySpuByPage(Integer page, Integer rows, Boolean saleable, String key) {
         //分页
         PageHelper.startPage(page, rows);
         //过滤
-        Example example = new Example(Brand.class);
+        Example example = new Example(Spu.class);
         Example.Criteria criteria=example.createCriteria();
         //搜索过滤字段
         if (StringUtils.isNotBlank(key)) {
            criteria.andLike("title","%"+key+"%");
         }
         // 上下架过滤
-        if (saleable!=null) {
+        if (saleable != null) {
           criteria.andEqualTo("saleable",saleable);
         }
         //默认排序

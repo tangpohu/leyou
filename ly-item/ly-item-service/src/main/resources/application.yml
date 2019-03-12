@@ -18,7 +18,7 @@ spring:
     template:
       retry:
         enabled: true
-        initial-interval: 10000ms
+        initial-interval: 100000ms
         max-interval: 300000ms
         multiplier: 2
       exchange: ly.item.exchange
