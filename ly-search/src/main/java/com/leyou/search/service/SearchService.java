@@ -164,7 +164,7 @@ public class SearchService {
         //创建查询构造器
         NativeSearchQueryBuilder queryBuilder = new NativeSearchQueryBuilder();
         // 结果过滤
-        queryBuilder.withSourceFilter(new FetchSourceFilter(new String[]{"id", "skus", "subTitle"}, null));
+        queryBuilder.withSourceFilter(new FetchSourceFilter(new String[]{"id", "subTitle", "skus"}, null));
         //分页
         queryBuilder.withPageable(PageRequest.of(page,size));
         //过滤
@@ -174,9 +174,9 @@ public class SearchService {
 
         //解析结果
         long total = result.getTotalElements();
-        int totalPages = result.getTotalPages();
+        int totalPage = result.getTotalPages();
         List<Goods> goodsList = result.getContent();
-        return new  PageResult(total, (long) totalPages,goodsList);
+        return new  PageResult<>(total ,totalPage,goodsList);
     }
 
 }
