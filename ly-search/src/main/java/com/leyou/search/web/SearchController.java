@@ -22,4 +22,5 @@ public class SearchController {
         return ResponseEntity.ok(searchService.search(request));
     }
 
+
 }

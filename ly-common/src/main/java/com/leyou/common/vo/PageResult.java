@@ -6,9 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.List;
 
 /**
- * @Author: cuzz
- * @Date: 2018/11/2 9:55
- * @Description: 分页类
+ * 分页类
  */
 @Data
 public class PageResult<T> {
@@ -16,7 +14,8 @@ public class PageResult<T> {
     private Integer totalPage; // 总页数
     private List<T> items;  // 当前页数据
 
-
+    public PageResult(){
+    }
 
     public PageResult(Long total, List<T> items) {
         this.total = total;

@@ -7,7 +7,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
-public interface CategrouyApi {
+
+public interface CategroyApi {
     @GetMapping("category/list/ids")
     List<Category> queryCategoryByIds(@RequestParam("ids") List<Long> ids);
 }
