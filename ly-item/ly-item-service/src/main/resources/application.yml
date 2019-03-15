@@ -11,9 +11,9 @@ spring:
       maximum-pool-size: 30
       minimum-idle: 10
   rabbitmq:
-    host: 111.230.104.64
-    username: guest
-    password: guest
+    host: 192.168.137.141
+    username: leyou
+    password: leyou
     virtual-host: /leyou
     template:
       retry:

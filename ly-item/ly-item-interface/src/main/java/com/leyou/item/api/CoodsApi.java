@@ -21,7 +21,9 @@ public interface CoodsApi {
      * */
     @GetMapping("sku/list")
     List<Sku> querySkuBySpuId(@RequestParam("id")Long spuId);
-
+    /*
+    * 分页查询spu
+    * */
     @GetMapping("/spu/page")
     PageResult<Spu> querySpuByPage(
             @RequestParam(value="page",defaultValue = "1")Integer page,
@@ -29,4 +31,9 @@ public interface CoodsApi {
             @RequestParam(value="saleable",required = false) Boolean saleable,
             @RequestParam(value="key",required = false)String key
     );
+    /*
+    *根据spu的id查询spu
+    * */
+    @GetMapping("spu/{id}")
+    Spu querySpuById(@PathVariable("id")Long id);
 }

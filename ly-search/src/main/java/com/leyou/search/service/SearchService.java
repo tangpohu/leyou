@@ -296,4 +296,16 @@ public class SearchService {
         }
     }
 
+    public void createOrUpdateIndex(Long spuId) {
+        //查询spu
+        Spu spu = goodsClient.querySpuById(spuId);
+        //构建goods对象
+        Goods goods = buildGoods(spu);
+        //存入索引库
+        repository.save(goods);
+    }
+
+    public void deleteIndex(Long spuId) {
+        repository.deleteById(spuId);
+    }
 }
