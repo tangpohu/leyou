@@ -1,10 +1,9 @@
 package com.leyou.common.vo;
 
 import lombok.Data;
-import org.springframework.web.bind.annotation.RequestMapping;
+
 
 import java.util.List;
-
 /**
  * 分页类
  */

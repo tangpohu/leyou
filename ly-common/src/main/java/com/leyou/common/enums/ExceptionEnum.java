@@ -23,7 +23,7 @@ public enum  ExceptionEnum {
     GOODS_SAVE_ERROR(500,"新增商品失败"),
     GOODS_UPDATE_ERROR(500,"修改商品失败"),
     GOODS_ID_CANNOT_BE_NULL(400,"商品id不能为空"),
-
+    USER_DATA_TYPE_ERROR(400,"用户的数据类型不正确"),
 
     ;
     private int code;

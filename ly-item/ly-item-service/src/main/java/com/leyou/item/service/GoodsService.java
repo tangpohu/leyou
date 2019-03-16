@@ -153,20 +153,12 @@ public class GoodsService {
             throw new LyException(ExceptionEnum.GOODS_SKU_NOT_FOUND);
         }
         //查询库存
-        /*for (Sku s : skuList) {
-            Stock stock = stockMapper.selectByPrimaryKey(s.getId());
-            if (stock ==null){
-                throw  new LyException(ExceptionEnum.GOODS_STOCK_NOT_FOUND);
-            }
-            s.setStock(stock.getStock());
-        }*/
-        //查询库存
         List<Long> ids =skuList.stream().map(Sku::getId).collect(Collectors.toList());
         List<Stock> stockList =stockMapper.selectByIdList(ids);
         if (CollectionUtils.isEmpty(skuList)){
             throw  new LyException(ExceptionEnum.GOODS_STOCK_NOT_FOUND);
         }
-        //我们把stock变成一个map、其key是:sku的id，值是库存值
+        //把stock变成一个map、其key是:sku的id，值是库存值
         Map<Long,Integer> stockMap =stockList.stream()
                 .collect(Collectors.toMap(Stock::getSkuId,Stock::getStock));
         skuList.forEach(s->s.setStock(stockMap.get(s.getId())));
