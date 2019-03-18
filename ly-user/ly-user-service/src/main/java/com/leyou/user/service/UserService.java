@@ -15,7 +15,7 @@ public class UserService {
 
     public Boolean chackData(String data, Integer type) {
         User record =new User();
-        //判断数据
+        //判断数据是否为
         switch (type){
             case 1:
                 record.setUsername(data);
