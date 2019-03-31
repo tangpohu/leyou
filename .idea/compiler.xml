@@ -8,6 +8,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="ley-upload" />
+        <module name="leyou-auth-commono" />
+        <module name="leyou-auth-service" />
         <module name="ly-common" />
         <module name="ly-gateway" />
         <module name="ly-item-interface" />

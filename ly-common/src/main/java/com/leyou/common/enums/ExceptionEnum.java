@@ -24,6 +24,8 @@ public enum  ExceptionEnum {
     GOODS_UPDATE_ERROR(500,"修改商品失败"),
     GOODS_ID_CANNOT_BE_NULL(400,"商品id不能为空"),
     USER_DATA_TYPE_ERROR(400,"用户的数据类型不正确"),
+    PASSWORD_IS_ERROR(500,"密码错误"),
+    USER_DONT_EXSIST(500,"用户错误"),
 
     ;
     private int code;

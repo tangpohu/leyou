@@ -143,7 +143,8 @@ public class GoodsService {
         }
         return  detail;
     }
-
+    /*
+    * gouwu*/
     public List<Sku> querySkuBySpuId(Long spuId) {
         //查询sku
         Sku sku = new Sku();
