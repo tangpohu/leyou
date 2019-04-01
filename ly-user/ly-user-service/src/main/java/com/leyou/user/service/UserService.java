@@ -24,7 +24,7 @@ public class UserService {
             case 2:user.setPhone(data);
                 break;
             default:
-                    return null;
+                    throw  new  LyException(ExceptionEnum.TYPE_ERROR);
         }
         return  userMapper.selectCount(user)==0;
 

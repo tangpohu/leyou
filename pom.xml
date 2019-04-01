@@ -17,6 +17,8 @@
         <module>ly-sms</module>
         <module>ly-user</module>
         <module>leyou-auth</module>
+        <module>ly-cart</module>
+        <module>leyou-cart</module>
     </modules>
     <packaging>pom</packaging>
 

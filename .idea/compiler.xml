@@ -10,6 +10,7 @@
         <module name="ley-upload" />
         <module name="leyou-auth-commono" />
         <module name="leyou-auth-service" />
+        <module name="leyou-cart" />
         <module name="ly-common" />
         <module name="ly-gateway" />
         <module name="ly-item-interface" />
@@ -23,6 +24,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="ly-cart" target="1.8" />
+      <module name="ly-cart (1) (com.leyou.service)" target="1.8" />
       <module name="ly-upload" target="1.8" />
       <module name="lyupload" target="1.8" />
     </bytecodeTargetLevel>

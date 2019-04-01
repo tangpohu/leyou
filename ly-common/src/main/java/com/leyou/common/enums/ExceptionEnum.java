@@ -26,6 +26,7 @@ public enum  ExceptionEnum {
     USER_DATA_TYPE_ERROR(400,"用户的数据类型不正确"),
     PASSWORD_IS_ERROR(500,"密码错误"),
     USER_DONT_EXSIST(500,"用户错误"),
+    TYPE_ERROR(400,"参数异常"),
 
     ;
     private int code;
